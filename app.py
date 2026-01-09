@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import oracledb
-# Enable thick mode for advanced connection features
-oracledb.init_oracle_client()
 
 # 1. Configuration
 QUERIES = {
@@ -186,4 +184,5 @@ def render_dashboard():
 # Execute the fragment
 
 render_dashboard()
+
 
