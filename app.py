@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+import oracledb
+# Enable thick mode for advanced connection features
+oracledb.init_oracle_client(mode=oracledb.ORACLE_CLIENT_THICK)
 
 # 1. Configuration
 QUERIES = {
@@ -181,4 +184,5 @@ def render_dashboard():
             st.info("💡 Run 'utlrp.sql' as SYS to recompile these objects.")
 
 # Execute the fragment
+
 render_dashboard()
